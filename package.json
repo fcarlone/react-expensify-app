@@ -5,8 +5,9 @@
   "author": "Frank Carlone",
   "license": "MIT",
   "scripts": {
-    "server": "live-server public/",
-    "build": "webpack",
+    "serve": "live-server public/",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json"
   },
