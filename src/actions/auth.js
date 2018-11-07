@@ -26,7 +26,7 @@ export const createUser = (email, password) => {
 export const loginUser = (email, password) => {
   return () => {
     return firebase.auth().signInWithEmailAndPassword(email, password)
-      .catch(() => {
+      .catch((error) => {
         let errorMessage = error.message;
         alert(`Error Message: ${errorMessage}`);
       });

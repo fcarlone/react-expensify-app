@@ -46,7 +46,6 @@ export const setExpenses = (expenses) => ({
   expenses
 });
 
-// export const startSetExpenses;
 export const startSetExpenses = () => {
   return (dispatch, setState) => {
     const uid = setState().auth.uid;

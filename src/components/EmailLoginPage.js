@@ -32,16 +32,13 @@ export class EmailLoginPage extends React.Component {
         error: 'Try logging in again.'
       }))
     };
-    console.log(`e:{}`)
   };
 
   onLogin = () => {
-    console.log(`onLogin ${this.state.email} ${this.state.password}`);
     this.props.loginUser(this.state.email, this.state.password);
   }
 
   onSignUp = () => {
-    console.log(`onSignUp ${this.state.email}, ${this.state.password}`)
     this.props.createUser(this.state.email, this.state.password);
   };
 
