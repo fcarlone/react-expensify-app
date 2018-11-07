@@ -17,41 +17,6 @@ import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
 
-// add expenses
-// store.dispatch(addExpense({
-//   description: 'Water bill',
-//   amount: 1200,
-//   createdAt: 200
-// }));
-
-// store.dispatch(addExpense({
-//   description: 'Gas bill',
-//   amount: 12500,
-//   createdAt: 300
-// }));
-
-// store.dispatch(addExpense({
-//   description: 'Rent bill',
-//   amount: 250000,
-//   createdAt: 100
-// }));
-
-// console.log(store.getState());
-
-// filter expenses
-// store.dispatch(setTextFilter(''));
-
-// setTimeout(() => {
-//   store.dispatch(setTextFilter('water'));
-// }, 4000)
-
-// console.log(store.getState());
-
-// get visible expenses
-// const state = store.getState();
-// const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
-// console.log(visibleExpenses);
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />
@@ -69,19 +34,12 @@ const renderApp = () => {
 
 ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
-// store.dispatch(startSetExpenses()).then(() => {
-//   ReactDOM.render(jsx, document.getElementById('app'));
-// });
-
-// ReactDOM.render(jsx, document.getElementById('app'));
-
 // Check if Firebase Authenticaton is working
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(login(user.uid));
     console.log('log in - user id:', user.uid);
     store.dispatch(startSetExpenses()).then(() => {
-      // ReactDOM.render(jsx, document.getElementById('app'));
       renderApp();
       if (history.location.pathname === '/') {
         history.push('/dashboard');
@@ -90,7 +48,6 @@ firebase.auth().onAuthStateChanged((user) => {
   } else {
     store.dispatch(logout());
     console.log('log out')
-    // ReactDOM.render(jsx, document.getElementById('app'));
     renderApp();
     history.push('/');
   }

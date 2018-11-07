@@ -8,7 +8,7 @@ export const Header = ({ startLogout }) => (
     <div className="content-container">
       <div className="header__content">
         <Link className="header__title" to="/dashboard">
-          <h1>Expensify</h1>
+          <h1>React Expense Ledger</h1>
         </Link>
         <button className="button-layout button-layout--link" onClick={startLogout}>Logout</button>
       </div>
@@ -22,4 +22,3 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(undefined, mapDispatchToProps)(Header);
 
-// <NavLink to="/edit" activeClassName="is-active">Edit Expense</NavLink>

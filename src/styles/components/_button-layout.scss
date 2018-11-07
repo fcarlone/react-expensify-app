@@ -10,6 +10,46 @@
   text-decoration: none;
 }
 
+.button-layout-2 {
+  background-color: white;
+  border: none;
+  color: $light-blue;
+  display: inline-block;
+  font-size: $font-size-large;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: $m-size;
+  padding: $s-size;
+  text-decoration: none;
+}
+
+.button-layout-login {
+  background-color: blue;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-size: $font-size-large;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: $m-size;
+  padding: $s-size;
+  text-decoration: none;
+}
+
+.button-layout-signup {
+  background-color: white;
+  border: none;
+  color: blue;
+  display: inline-block;
+  font-size: $font-size-large;
+  font-weight: 300;
+  line-height: 1;
+  margin-left: $m-size;
+  margin-top: $m-size;
+  padding: $s-size;
+  text-decoration: none;
+}
+
 .button-layout--link {
   background-color: $dark-blue;
   border: none;

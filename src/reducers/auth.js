@@ -7,6 +7,10 @@ export default (state = {}, action) => {
       };
     case 'LOGOUT':
       return {};
+    case 'CREATEUSER':
+      return {
+        email: action.email
+      }
     default:
       return state;
   }

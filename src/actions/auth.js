@@ -11,6 +11,28 @@ export const startLogin = () => {
   };
 };
 
+// Firebase email createUser method
+export const createUser = (email, password) => {
+  return () => {
+    return firebase.auth().createUserWithEmailAndPassword(email, password)
+      .catch((error) => {
+        let errorMessage = error.message;
+        alert(`Error Message: ${errorMessage}`);
+      });
+  }
+};
+
+// Firebase email signIn method
+export const loginUser = (email, password) => {
+  return () => {
+    return firebase.auth().signInWithEmailAndPassword(email, password)
+      .catch(() => {
+        let errorMessage = error.message;
+        alert(`Error Message: ${errorMessage}`);
+      });
+  }
+};
+
 export const logout = () => ({
   type: 'LOGOUT'
 });
