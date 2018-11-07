@@ -33,15 +33,6 @@ test('should set description on input change', () => {
   expect(wrapper.state('description')).toBe(value);
 });
 
-// test('should set note on textarea change', () => {
-//   const value = 'New note';
-//   const wrapper = shallow(<ExpenseForm />);
-//   wrapper.find('textarea').simulate('change', {
-//     target: { value }
-//   });
-//   expect(wrapper.state('note')).toBe(value);
-// });
-
 test('should set amount if valid input', () => {
   const value = '123.11';
   const wrapper = shallow(<ExpenseForm />);
@@ -89,8 +80,3 @@ test('should set calendar focus on change', () => {
   expect(wrapper.state('calendarFocused')).toBe(focused);
 });
 
-// test('should call onSubmit prop for valid form submission', () => {
-//   const onSubmitSpy = jest.fn();
-//   onSubmitSpy('Frank', 'Philadelphia');
-//   expect(onSubmitSpy).toHaveBeenCalledWith('Frank', 'Philadelphia');
-// });

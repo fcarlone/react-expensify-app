@@ -22,7 +22,6 @@ export class EmailLoginPage extends React.Component {
   onChangePassword = (e) => {
     e.persist();
     this.setState(() => ({ password: e.target.value }))
-
   };
 
   onSubmit = (e) => {

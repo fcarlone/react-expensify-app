@@ -25,20 +25,7 @@ export class AddExpensePage extends React.Component {
       </div>
     );
   }
-}
-
-// const AddExpensePage = (props) => (
-//   <div>
-//     <h1>Add Expense</h1>
-//     <ExpenseForm
-//       onSubmit={(expense) => {
-//         // props.dispatch(addExpense(expense));
-//         props.onSubmit(expense);
-//         props.history.push('/');
-//       }}
-//     />
-//   </div>
-// );
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

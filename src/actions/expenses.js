@@ -1,4 +1,3 @@
-import uuid from 'uuid';
 import database from '../firebase/firebase';
 
 // ADD_EXPENSE Action
@@ -62,7 +61,6 @@ export const startSetExpenses = () => {
             ...childsnapshot.val()
           });
         });
-        // console.log(expenses)
         dispatch(setExpenses(expenses));
       });
   };
@@ -89,20 +87,5 @@ export const startEditExpense = (id, updates) => {
       });
 
   }
-}
-
-//   database.ref('expenses')
-//     .once('value')
-//     .then((snapshot) => {
-//       const expenses = [];
-
-//       snapshot.forEach((childsnapshot) => {
-//         expenses.push({
-//           id: childsnapshot.key,
-//           ...childsnapshot.val()
-//         });
-//       });
-//       console.log(expenses)
-//     })
-// };
+};
 

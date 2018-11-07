@@ -39,5 +39,3 @@ export default (state = fitlersReducerDefaultState, action) => {
       return state
   }
 };
-
-// export default filtersReducer

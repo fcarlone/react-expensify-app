@@ -6,7 +6,6 @@ import authReducer from '../reducers/auth';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-// to call the function and return the store
 export default () => {
   const store = createStore(
     combineReducers({
@@ -15,15 +14,6 @@ export default () => {
       auth: authReducer
     }),
     composeEnhancers(applyMiddleware(thunk))
-    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   );
   return store
 }
-
-// Store creation
-// const store = createStore(
-//   combineReducers({
-//     expenses: expensesReducer,
-//     filters: filtersReducer
-//   })
-// );

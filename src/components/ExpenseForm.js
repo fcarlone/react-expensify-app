@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
-// import 'react-dates/lib/css/_datepicker.css';
 
 const now = moment();
 
@@ -25,8 +24,6 @@ export default class ExpenseForm extends React.Component {
   };
 
   onNoteonChange = (e) => {
-    // could use e.persist() if don't want to store const.
-    // const note = e.target.value;
     e.persist();
     this.setState(() => ({ note: e.target.value }))
   };
@@ -53,7 +50,6 @@ export default class ExpenseForm extends React.Component {
     e.preventDefault()
 
     if (!this.state.description || !this.state.amount) {
-      // Set error state equal to 'Please provide description and amount'
       this.setState(() => ({
         error: 'Please provide description and amount.'
       }))
@@ -110,4 +106,4 @@ export default class ExpenseForm extends React.Component {
       </form>
     )
   }
-}
+};

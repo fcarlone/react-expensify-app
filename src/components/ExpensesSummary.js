@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import selectExpenses from '../selectors/expenses';
 import selectExpensesTotal from '../selectors/expenses-total';
 import numeral from 'numeral';
-import { userInfo } from 'os';
 
 export const ExpenseSummary = (props) => {
   const expenseWord = props.expenseCount === 1 ? 'expense' : 'expenses';

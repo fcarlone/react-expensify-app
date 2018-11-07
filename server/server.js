@@ -6,7 +6,6 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
 
-// match all unmatached routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 });
