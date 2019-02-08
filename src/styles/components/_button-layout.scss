@@ -13,23 +13,29 @@
 .button-layout-2 {
   background-color: white;
   border: none;
-  color: $light-blue;
+  border-radius: 5px;
+  color: black;
   display: inline-block;
   font-size: $font-size-large;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1;
   margin-top: $m-size;
   padding: $s-size;
   text-decoration: none;
 }
 
+.button-layout-2-icon {
+  padding-right: 5px;
+}
+
 .button-layout-login {
-  background-color: blue;
+  background-color: #1c88bf;
   border: none;
+  border-radius: 10px;
   color: white;
   display: inline-block;
   font-size: $font-size-large;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1;
   margin-top: $m-size;
   padding: $s-size;
@@ -37,17 +43,24 @@
 }
 
 .button-layout-signup {
-  background-color: white;
+  background-color: #1c88bf;
   border: none;
-  color: blue;
+  border-radius: 10px;
+  color: white;
   display: inline-block;
   font-size: $font-size-large;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1;
   margin-left: $m-size;
   margin-top: $m-size;
   padding: $s-size;
   text-decoration: none;
+}
+
+.button-layout-login:hover,
+.button-layout-signup:hover {
+  background: grey;
+  color: white;
 }
 
 .button-layout--link {
@@ -58,4 +71,33 @@
 
 .button-layout--secondary {
   background-color: #888888;
+}
+
+.google-button {
+  display: inline-block;
+  font-size: $font-size-large;
+  font-weight: 500;
+  line-height: 1;
+  margin-top: $m-size;
+  padding: $s-size;
+  text-decoration: none
+}
+
+.google-button-icon {}
+
+.google-button {
+  text-align: center;
+  border-radius: 5px;
+}
+
+.google-button:hover {
+  color: $light-blue;
+}
+
+.button-layout-2-text:hover {
+  color: $light-blue;
+}
+
+svg {
+  width: $m-size;
 }
